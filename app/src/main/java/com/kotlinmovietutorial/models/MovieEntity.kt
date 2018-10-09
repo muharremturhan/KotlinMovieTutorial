@@ -5,37 +5,37 @@ import android.arch.persistence.room.PrimaryKey
 
 
 
-class MovieEntity {
+data class MovieEntity (
 
     @PrimaryKey
     @SerializedName("id")
-    val id: Int = 0
+    val id: Int = 0,
 
     @SerializedName("poster_path")
-    val posterPath: String? = null
+    val posterPath: String?,
 
     @SerializedName("adult")
-    val adult: Boolean = false
+    val adult: Boolean = false,
 
     @SerializedName("overview")
-    val overview: String? = null
+    val overview: String?,
 
     @SerializedName("original_title")
-    val originalTitle: String? = null
+    val originalTitle: String?,
 
     @SerializedName("title")
-    val title: String? = null
+    val title: String?,
 
     @SerializedName("vote_count")
-    val voteCount: Int = 0
+    val voteCount: Int = 0,
 
     @SerializedName("vote_average")
-    val voteAverage: Double = 0.toDouble()
+    val voteAverage: Double ,
 
     @SerializedName("backdrop_path")
-    val backdropPath: String? = null
+    val backdropPath: String?,
 
     @SerializedName("original_language")
-    val originalLanguage: String? = null
+    val originalLanguage: String?
 
-}
+)
