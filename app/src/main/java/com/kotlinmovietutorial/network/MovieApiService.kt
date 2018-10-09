@@ -23,10 +23,11 @@ object MovieApiService {
                 .build()
     }
     private fun provideOkhttpClient():OkHttpClient{
-        val okHttpClient = OkHttpClient.Builder()
-        okHttpClient.connectTimeout(Constants.TIME_OUT,TimeUnit.SECONDS)
-        okHttpClient.readTimeout(Constants.TIME_OUT,TimeUnit.SECONDS)
-        okHttpClient.addInterceptor(RequestInterceptor())
-        return okHttpClient.build()
+
+        return OkHttpClient.Builder()
+                .connectTimeout(Constants.TIME_OUT,TimeUnit.SECONDS)
+                .readTimeout(Constants.TIME_OUT,TimeUnit.SECONDS)
+                .addInterceptor(RequestInterceptor())
+                .build()
     }
 }
